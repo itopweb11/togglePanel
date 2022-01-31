@@ -1,9 +1,13 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
+import TogglePanel from "./components/TogglePanel";
+import {panelData, todoList} from "./helpers";
 
 function App() {
   return (
-    <div className="App">
-
+    <div className="container-md">
+      <TogglePanel data={panelData} />
+      <TogglePanel data={todoList} />
     </div>
   );
 }
