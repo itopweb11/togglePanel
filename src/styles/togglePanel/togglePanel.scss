@@ -1,0 +1,36 @@
+.togglePanel {
+  min-height: 350px;
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    &_item {
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      padding: 0 10px;
+      color: #333333;
+      transition: color .7s ease;
+      margin-top: 15px;
+      user-select: none;
+
+      &.active {
+        color: white;
+        transition: color .5s ease;
+      }
+    }
+  }
+
+}
+
+.animation {
+  position: absolute;
+  z-index: 0;
+  transition: all .5s ease;
+  border-radius: 8px;
+  width: 100px;
+  left: 0;
+  background-color: #007bff;
+}

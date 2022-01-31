@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
+import './styles/app.scss';
 import TogglePanel from "./components/TogglePanel";
 import {panelData, todoList} from "./helpers";
 

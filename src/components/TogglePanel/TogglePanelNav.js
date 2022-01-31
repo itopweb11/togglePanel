@@ -1,20 +1,19 @@
-import {NavItem, NavLink} from "reactstrap";
 import cn from 'classnames';
 import {array, func, number} from "prop-types";
 
-const TogglePanelNav = ({data, activeTab, setActiveTab}) => {
+const TogglePanelNav = ({data, activeTab, setActiveTab, activeTabRef}) => {
     return data.map(item => {
         const {toggleBtnTitle, id} = item;
 
         return (
-            <NavItem key={id}>
-                <NavLink
-                    className={cn({active: activeTab === id, })}
-                    onClick={() => setActiveTab(id)}
-                >
-                    {toggleBtnTitle}
-                </NavLink>
-            </NavItem>
+            <div
+                ref={activeTab === id ? activeTabRef : null}
+                key={id}
+                className={cn({active: activeTab === id, 'togglePanel__nav_item': true})}
+                onClick={() => setActiveTab(id)}
+            >
+                {toggleBtnTitle}
+            </div>
         )
     })
 }
